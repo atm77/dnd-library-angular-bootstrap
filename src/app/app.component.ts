@@ -2,8 +2,7 @@ import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component } from '@angular/core';
 
 import { NgbModal, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-import { AlertModalService } from './shared/alert-modal/alert-modal.service';
-import { LoadingModalService } from './shared/loading-modal/loading-modal.service';
+import { CommonModalsService } from './shared/services/common-modals.service';
 
 @Component({
   selector: 'app-root',
@@ -15,16 +14,17 @@ export class AppComponent {
   title = 'dnd-library-angular-bootstrap';
   activeModal: NgbActiveModal;
 
-  constructor(private modalService: NgbModal, private alertModalService: AlertModalService, private loadingModalService: LoadingModalService) { }
+  constructor(private commonModalsService: CommonModalsService) { }
 
   openAlertModal() {
-    this.alertModalService.showAlert("aokdoks", "asokasko");
+    this.commonModalsService.showAlert('1', 'teste 1');
+    this.commonModalsService.showAlert('2', 'teste 2');
   }
 
   openLoadingModal() {
-    this.loadingModalService.startLoading('wait for a second...');
+    this.commonModalsService.startLoading('wait for a second...');
     window.setTimeout(() => {
-      this.loadingModalService.stopLoading();
+      this.commonModalsService.stopLoading();
     }, 3000)
   }
 
