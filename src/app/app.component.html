@@ -3,3 +3,7 @@
 <button class="btn btn-success" (click)="openAlertModal()">Open Alert</button>
 <br><br>
 <button class="btn btn-info" (click)="openLoadingModal()">Open Loading</button>
+
+<select (change)="handleSelectMonster($event)">
+  <option *ngFor="let item of monstersList.results" [value]="item.index">{{item.name}}</option>
+</select>
