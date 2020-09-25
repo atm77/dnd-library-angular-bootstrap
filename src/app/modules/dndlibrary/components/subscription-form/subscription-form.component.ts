@@ -19,23 +19,22 @@ export class SubscriptionFormComponent implements OnInit {
     this.createForm(new User());
   }
 
-  onSubmit(fdata: FormData): void {
-    console.log(fdata);
-    debugger
+  onSubmit(): void {
+    console.log(this.subscriptionForm.value);
   }
 
   createForm(user: User) {
-    /*this.subscriptionForm = new FormGroup({
+    this.subscriptionForm = new FormGroup({
       name: new FormControl(user.name),
       email: new FormControl(user.email),
       culture: new FormControl(user.culture),
-    })*/
+    })
 
-    this.subscriptionForm = this.fb.group({
+    /*this.subscriptionForm = this.fb.group({
       name: [user.name],
       email: [user.email],
       culture: [user.culture],
-    })
+    })*/
   }
 
   setOtherValues(): void {
