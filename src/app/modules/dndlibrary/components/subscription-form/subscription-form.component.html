@@ -1,8 +1,29 @@
-<form *ngIf="myForm" [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)" >
-  <input formControlName="name" placeholder="Your name">
-  <input formControlName="email" placeholder="Your email">
-  <input formControlName="message" placeholder="Your message">
+<form *ngIf="subscriptionForm" [formGroup]="subscriptionForm" (ngSubmit)="onSubmit(subscriptionForm)" >
 
-  <button type="submit">Send</button>
-  <button type="button" (click)="setOtherValues()">Set other values</button>
+  <div class="form-group">
+    <label for="subscription-name">Name</label>
+    <input class="form-control" formControlName="name" placeholder="Your name" id="subscription-name">
+  </div>
+
+  <div class="form-group">
+    <label for="subscription-name">E-mail</label>
+    <input
+      class="form-control"
+      type="email"
+      formControlName="email"
+      placeholder="Your email"
+    >
+  </div>
+
+  <div>
+    <label for=""></label>
+    <select class="form-control" formControlName="culture">
+      <option *ngFor="let language of languages | keyvalue" [value]="language.key">{{ language.value }}</option>
+    </select>
+  </div>
+
+  <div class="container m-3">
+    <button class="btn btn-success" type="submit">Send</button>
+    <button style="margin-left: 4px;" class="btn btn-info" type="button" (click)="setOtherValues()">Set other values</button>
+  </div>
 </form>

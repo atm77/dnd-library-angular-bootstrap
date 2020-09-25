@@ -1,12 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 
-export interface Teste {
-  name: string;
-  email: string;
-  message: string;
-}
-
+import { languages } from '../../../../shared/utils/enums';
+import { User } from '../../../../shared/models/user';
 
 @Component({
   selector: 'dndlibrary-subscription-form',
@@ -15,33 +11,46 @@ export interface Teste {
 export class SubscriptionFormComponent implements OnInit {
   constructor(private fb: FormBuilder) {}
 
-  myForm: FormGroup;
-  teste: Teste;
+  languages = languages;
+
+  subscriptionForm: FormGroup;
 
   ngOnInit() {
-
-    this.teste = {
-      name: 'oksdoaks',
-      email: 'oaskdaoskd',
-      message: 'odksaoka',
-    }
-
-    this.myForm = this.fb.group(this.teste);
+    this.createForm(new User());
   }
 
-  onSubmit(data: FormData): void {
-    console.log(data);
+  onSubmit(fdata: FormData): void {
+    console.log(fdata);
     debugger
   }
 
-  setOtherValues(): void {
-    this.teste = {
-      name: 'aaaaugusto',
-      email: 'testes',
-      message: 'okokok'
-    }
+  createForm(user: User) {
+    /*this.subscriptionForm = new FormGroup({
+      name: new FormControl(user.name),
+      email: new FormControl(user.email),
+      culture: new FormControl(user.culture),
+    })*/
 
-    this.myForm = this.fb.group(this.teste);
+    this.subscriptionForm = this.fb.group({
+      name: [user.name],
+      email: [user.email],
+      culture: [user.culture],
+    })
+  }
+
+  setOtherValues(): void {
+
+    let user = new User();
+    user.name = 'Augusto';
+    user.email = 'augusto@gmail.com';
+    user.culture = Object.keys(languages).find(x => x == 'pt-BR');
+
+    this.subscriptionForm.setValue({
+      name: [user.name],
+      email: [user.email],
+      culture: [user.culture],
+    })
+
   }
 
 }
