@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 
-import { languages } from '../../../../shared/utils/enums';
-import { User } from '../../../../shared/models/user';
+import { languages } from 'src/app/utils/enums';
+import { User } from 'src/app/shared/models/user';
 
 @Component({
   selector: 'dndlibrary-subscription-form',
-  templateUrl: 'subscription-form.component.html'
+  templateUrl: 'subscription-form.component.html',
 })
 export class SubscriptionFormComponent implements OnInit {
   constructor(private fb: FormBuilder) {}

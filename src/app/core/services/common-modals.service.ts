@@ -2,8 +2,8 @@ import { Injectable } from "@angular/core";
 
 import { NgbModal, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
-import { AlertModalComponent } from '../alert-modal/alert-modal.component';
-import { LoadingModalComponent } from '../loading-modal/loading-modal.component';
+import { AlertModalComponent } from 'src/app/shared/components/alert-modal/alert-modal.component';
+import { LoadingModalComponent } from 'src/app/shared/components/loading-modal/loading-modal.component';
 
 @Injectable({
   providedIn: 'root',

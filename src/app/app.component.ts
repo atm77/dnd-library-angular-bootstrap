@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-import { CommonModalsService } from './shared/services/common-modals.service';
+import { CommonModalsService } from './core/services/common-modals.service';
 import { MonsterService } from './core/http/api.service';
 import { ResultList } from './core/http/dtos/resultList';
 

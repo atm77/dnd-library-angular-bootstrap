@@ -6,15 +6,13 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CoreModule } from 'src/app/core/core.module'
+import { DndLibraryModule } from './modules/dndlibrary/dndlibrary.module'
 
-//temp
-import { SubscriptionFormComponent } from './modules/dndlibrary/components/subscription-form/subscription-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SubscriptionFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -22,8 +20,8 @@ import { SubscriptionFormComponent } from './modules/dndlibrary/components/subsc
     NgbModule,
     SharedModule,
     HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule,
+    CoreModule,
+    DndLibraryModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
