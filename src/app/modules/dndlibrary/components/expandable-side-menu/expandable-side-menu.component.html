@@ -3,7 +3,7 @@
   <div (mouseenter)="_onHover(true)" (mouseleave)="_onHover(false)" class="bar">
     <div class="logo">
     </div>
-    <div *ngIf="_expanded">
+    <div class="content">
       <div *ngFor="let item of menus">
           {{item}}
       </div>

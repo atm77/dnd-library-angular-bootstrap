@@ -18,6 +18,12 @@
 
   &:hover {
     width: 250px;
+
+    .content {
+      visibility: visible;
+      opacity: 1;
+      transition: visibility 0.3s, opacity 1s linear;
+    }
   }
 }
 
@@ -27,4 +33,12 @@
   height: 30px;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.content {
+
+  visibility: hidden;
+  opacity: 0;
+  //transition: visibility 0.5s linear 500ms, opacity 1s linear;
+
 }
