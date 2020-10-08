@@ -1,0 +1,16 @@
+<!-- Container for sidebar(s) + page content -->
+<ng-sidebar-container class="sidebar">
+
+  <!-- A sidebar -->
+  <ng-sidebar [(opened)]="_opened" mode="push">
+    <div class="bar">
+      teste
+    </div>
+  </ng-sidebar>
+
+  <!-- Page content -->
+  <div ng-sidebar-content>
+    <ng-content></ng-content>
+  </div>
+
+</ng-sidebar-container>
