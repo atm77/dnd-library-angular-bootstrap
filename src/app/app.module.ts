@@ -7,7 +7,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { CoreModule } from 'src/app/core/core.module'
-import { DndLibraryModule } from './modules/dndlibrary/dndlibrary.module'
+import { DndLibraryModule } from './modules/dndlibrary/dndlibrary.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { DndLibraryModule } from './modules/dndlibrary/dndlibrary.module'
     HttpClientModule,
     CoreModule,
     DndLibraryModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -8,6 +8,8 @@ import { ActivatedRoute } from '@angular/router';
 
 export class MonsterPageComponent implements OnInit {
   constructor() { }
+
+
 
   ngOnInit() {
 

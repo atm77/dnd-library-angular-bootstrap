@@ -1,0 +1,46 @@
+
+
+.els-wrapper {
+  position: relative;
+  width: 100%;
+
+  .top-el {
+    background-color: red;
+    height: 400px;
+  }
+
+  .left-el {
+    background-color: blue;
+    width: 200px;
+    height: 700px;
+    float: left;
+  }
+
+  .center-el {
+    position: absolute;
+    left: 200px;
+    padding: 10px;
+  }
+}
+
+.els-wrapper-2 {
+  .top-el {
+
+    height: 400px;
+    position: fixed;
+    background-color: red;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+  }
+
+  .left-el {
+    background-color: blue;
+    width: 200px;
+    height: 700px;
+    float: left;
+  }
+}
+
+

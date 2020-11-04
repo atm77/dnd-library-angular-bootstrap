@@ -8,11 +8,12 @@ import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { SidebarModule } from 'ng-sidebar';
 import { RacesPageComponent } from './pages/races-page/races-page.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
 
 @NgModule({
   imports: [FormsModule, ReactiveFormsModule, NgbModule, CommonModule, BrowserModule, SidebarModule],
   exports: [ExpandableSideMenuComponent, SubscriptionFormComponent],
-  declarations: [SubscriptionFormComponent, ExpandableSideMenuComponent, RacesPageComponent],
+  declarations: [SubscriptionFormComponent, ExpandableSideMenuComponent, RacesPageComponent, HomePageComponent],
   providers: [],
 })
 export class DndLibraryModule { }
